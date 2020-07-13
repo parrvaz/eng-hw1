@@ -12,7 +12,7 @@ app.use(express.json());
 const dotenv = require("dotenv");
 dotenv.config();
 
-PORT = process.env.port || 3000;
+const port = process.env.PORT || 3000;
 
 app.use("/gis", gis);
 
@@ -20,4 +20,4 @@ app.get("/", function (req, res) {
   res.send("Hi!");
 });
 
-app.listen(PORT, () => console.log(`Example app ${PORT}`));
+app.listen(port, () => console.log(`Example app ${port}`));
